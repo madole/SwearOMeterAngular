@@ -16,6 +16,12 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
 }
 
+.handWritingSmall {
+  font: 400 25px/0.4 'Lobster Two', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 1px 1px 0px #ededed, 2px 2px 0px rgba(0,0,0,0.15);
+}
+
 /* Space out content a bit */
 
 html, body {

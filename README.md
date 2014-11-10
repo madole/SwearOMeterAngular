@@ -18,3 +18,6 @@ To get up and running, clone the repo.
     
 This should open a browser window at http://localhost:9000 with liveReload enabled so you can work in your IDE and
 see the changes reflected in your browser almost immediately. 
+
+
+Checkout the demo at [SwearOMeter Angular](http://madole.github.io/SwearOMeterAngular)
