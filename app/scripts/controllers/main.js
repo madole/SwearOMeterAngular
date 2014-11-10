@@ -17,13 +17,19 @@ angular.module('swearOmeterAngularApp')
       } else {
         return name;
       }
+    };
 
+    $scope.spinner = false;
+
+    $scope.showSpinner = function() {
+      $scope.spinner = true;
     };
 
     $scope.submitUsername = function() {
 
       console.log($scope.username);
       queryService.queryTwitterApi($scope.username).then(function() {
+        angular.element('spinner').addClass('hide');
         $location.path('results');
       });
     };

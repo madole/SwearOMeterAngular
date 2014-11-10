@@ -10,7 +10,33 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+.handWriting {
+  font: 400 100px/1.3 'Lobster Two', Helvetica, sans-serif;
+  color: #2b2b2b;
+  text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+}
+
 /* Space out content a bit */
+
+html, body {
+  height: 100%;
+}
+#wrap {
+  min-height: 100%;
+}
+#main {
+  overflow:auto;
+  padding-bottom:150px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+}
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -70,10 +96,36 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+
+
   .container {
     max-width: 730px;
   }
+  .header {
+    .title {
+      text-align: center;
+      font-size: 8em;
+    }
 
+    .title > span {
+      color: lightskyblue;
+    }
+  }
+  .form {
+    position: relative;
+    .middle {
+      position: absolute;
+      left: 40%;
+    }
+  }
+  #result, #user {
+    text-align: center;
+    font-size: 3em;
+  }
+
+  #result > span, #user {
+    color: lightskyblue;
+  }
   /* Remove the padding we set earlier */
   .header,
   .marketing,
@@ -90,3 +142,172 @@ body {
     border-bottom: 0;
   }
 }
+
+.show {
+  display: inline;
+}
+/********************SPINNER********************/
+.spinner {
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: lightskyblue;
+
+  border-radius: 100%;
+  $animation: scaleout 1.0s infinite ease-in-out;
+}
+
+
+@keyframes scaleout {
+  0% {
+    $transform: scale(0.0);
+  }
+  100% {
+    $transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+/********************SPINNER********************/
+
+.show {
+  display:block;
+}
+
+.bubblingG {
+  @extend .hide;
+  @extend .center-block;
+  width:80px;
+  height:50px;
+  vertical-align: middle;
+}
+
+.bubblingG span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  margin: 25px auto;
+  background: #7ABAFF;
+  -moz-border-radius: 50px;
+  -moz-animation: bubblingG 1.3s infinite alternate;
+  -webkit-border-radius: 50px;
+  -webkit-animation: bubblingG 1.3s infinite alternate;
+  -ms-border-radius: 50px;
+  -ms-animation: bubblingG 1.3s infinite alternate;
+  -o-border-radius: 50px;
+  -o-animation: bubblingG 1.3s infinite alternate;
+  border-radius: 50px;
+  animation: bubblingG 1.3s infinite alternate;
+}
+
+#bubblingG_1 {
+  -moz-animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+#bubblingG_2 {
+  -moz-animation-delay: 0.39s;
+  -webkit-animation-delay: 0.39s;
+  -ms-animation-delay: 0.39s;
+  -o-animation-delay: 0.39s;
+  animation-delay: 0.39s;
+}
+
+#bubblingG_3 {
+  -moz-animation-delay: 0.78s;
+  -webkit-animation-delay: 0.78s;
+  -ms-animation-delay: 0.78s;
+  -o-animation-delay: 0.78s;
+  animation-delay: 0.78s;
+}
+
+@-moz-keyframes bubblingG {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color:#7ABAFF;
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    background-color:#94E2FF;
+    -moz-transform: translateY(-21px);
+  }
+
+}
+
+@-webkit-keyframes bubblingG {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color:#7ABAFF;
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    background-color:#94E2FF;
+    -webkit-transform: translateY(-21px);
+  }
+
+}
+
+@-ms-keyframes bubblingG {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color:#7ABAFF;
+    -ms-transform: translateY(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    background-color:#94E2FF;
+    -ms-transform: translateY(-21px);
+  }
+
+}
+
+@-o-keyframes bubblingG {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color:#7ABAFF;
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    background-color:#94E2FF;
+    -o-transform: translateY(-21px);
+  }
+
+}
+
+@keyframes bubblingG {
+  0% {
+    width: 10px;
+    height: 10px;
+    background-color:#7ABAFF;
+    transform: translateY(0);
+  }
+
+  100% {
+    width: 24px;
+    height: 24px;
+    background-color:#94E2FF;
+    transform: translateY(-21px);
+  }
+
+}
+

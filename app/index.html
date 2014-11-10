@@ -13,6 +13,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href="http://fonts.googleapis.com/css?family=Lobster+Two" rel="stylesheet" type="text/css">
   </head>
   <body ng-app="swearOmeterAngularApp">
     <!--[if lt IE 7]>
@@ -20,20 +21,19 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Swear O Meter</a></li>
-        </ul>
-        <h3 class="text-muted">SwearOMeter - AngularJS Style</h3>
-      </div>
-
-      <div ng-view=""></div>
-
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
+    <div id="wrap">
+      <div id="main" class="container">
+        <div class="header">
+          <div class="title">Swear<span>O</span>Meter
+            <h3 class="text-muted pull-right">AngularJS Style</h3>
+          </div>
+        </div>
+        <div ng-view=""></div>
       </div>
     </div>
+      <footer class="footer container">
+        <p><div class="pull-right"><span class="glyphicon glyphicon-heart"></span> By Andrew McDowell</div></p>
+      </footer>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -84,6 +84,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/results.js"></script>
         <script src="scripts/services/queryservice.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>

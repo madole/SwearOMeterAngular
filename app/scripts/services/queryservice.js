@@ -32,7 +32,7 @@ angular.module('swearOmeterAngularApp')
     var clearAll = function() {
       queryResult = {};
       cachedUsername = '';
-    }
+    };
 
     return {
       queryTwitterApi: queryTwitterApi,
