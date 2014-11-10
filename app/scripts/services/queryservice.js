@@ -14,33 +14,36 @@ angular.module('swearOmeterAngularApp')
     var queryResult = {},
       cachedUsername = '';
 
-    var queryTwitterApi = function(username) {
+    function queryTwitterApi(username) {
        cachedUsername = username;
 
       return $http.get('http://afternoon-citadel-9782.herokuapp.com/getSwearWords?username='+ username +'')
         .success(function(data) {
           queryResult = data;
           console.log(data);
-        }).error(function() {
-          console.log('FAILURE');
+        }).error(function(err) {
+          console.log('FAILURE', err);
         });
-    };
+    }
 
-    var getSwearTweets = function() {
+    function getSwearTweets() {
       return queryResult;
-    };
-    var clearAll = function() {
+    }
+
+    function clearAll() {
       queryResult = {};
       cachedUsername = '';
-    };
+    }
+
+    function getUsername() {
+      return cachedUsername;
+    }
 
     return {
       queryTwitterApi: queryTwitterApi,
       getSwearTweets: getSwearTweets,
       clearAll: clearAll,
-      getUsername: function() {
-        return cachedUsername;
-      }
+      getUsername: getUsername
     };
 
   });
